@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class PlayerCollision : MonoBehaviour
+namespace adk
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerCollision : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public UnityEvent onObstacleHit;
+        private void OnCollisionEnter(Collision collision)
+        {
+            if(collision.collider.tag == "Obstacle")
+            {
+                onObstacleHit.Invoke();
+                //player can move false
+                //enable restart canvas
+            } 
+        }
     }
 }
