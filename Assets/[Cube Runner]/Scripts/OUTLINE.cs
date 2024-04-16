@@ -21,19 +21,20 @@ Scripts:
 (Player) PlayerMovement -> responsible for players' forward and left/right movement
                            : IPointerDownHandler, IDragHandler, IPointerUpHandler
 (Player) PlayerCollision -> responsible for player objects collisions (obstacles, coins)
+                            *LevelRestartEvent, *LevelEndEvent
 (Input Canvas) InputHandler -> detects hand movement across the canvas and translates
                              to player left/right movement, player movement uses this data
                              : ISinglePointerRunnerInputListener
+(Tutorial Canvas) TutorialCanvas -> on click tap to play panel *LevelStartEvent
 (Menu Canvas) UIHandler -> detects the correct game phase and enables the appropriate
                             canvas
-(Coin Text) CoinText -> updates each time player hits coin (DOTween coin icon hop)
+(Coin Text) CoinText -> updates each time player hits coin (DOTween coin icon hop) *CoinCollectedEvent
 (Event Manager) EventManager -> All listeners of events are defined in this script
 -------------
 Events:
-1. LevelStartEvent -> called after tap to play screen
-2. LevelRestartEvent -> called when player hits obstacle or goes out of bounds
-3. LevelEndEvent -> called after player hits end trigger, "Level Complete Animation" (if last level instead pop up menu)
+1. *LevelStartEvent -> called after tap to play screen, invoked from Tutorial Canvas
+2. *LevelRestartEvent -> called when player hits obstacle or goes out of bounds
+3. *LevelEndEvent -> called after player hits end trigger, "Level Complete Animation" (if last level instead pop up menu)
 4. LoadNextLevelEvent -> called after LevelEndEvent
-5. CoinCollectedEvent -> called when player hits coins
-6. CoinTextUpdateEvent -> called after CoinCollectedEvent
+5. *CoinCollectedEvent -> called when player hits coins, update coin text
 */
