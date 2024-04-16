@@ -27,5 +27,9 @@ namespace adk
         {
             gameObject.SetActive(false);
         }
+        public void EnableTapToPlayPanel()
+        {
+            gameObject.SetActive(true);
+        }
     }
 }
