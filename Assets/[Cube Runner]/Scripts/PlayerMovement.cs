@@ -2,12 +2,18 @@ using UnityEngine;
 
 namespace adk
 {
+    [RequireComponent(typeof(Rigidbody))]
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField] private Rigidbody rb;
+        private Rigidbody rb;
         public float forwardForce = -2000f;
         public bool canMove = false;
 
+        private void OnEnable()
+        {
+            rb = GetComponent<Rigidbody>();
+        }
+        
         void FixedUpdate() //does not depend on fps
         {
             if (!canMove) return; //if tap to play panel is still open return
