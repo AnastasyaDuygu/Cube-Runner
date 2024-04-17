@@ -37,7 +37,8 @@ namespace adk
             //
             var dragX = cumulativeDrag.x - _pivotDragX;
             var posX = _pivotPosX + dragX * inputSensitivity;
-            _targetPosX = posX;
+            _targetPosX = posX-270; //for some reason it adds the x pos of the canvas its in -.- so i subtract it
+            Debug.Log(posX);
         }
         public void OnPointerUp(PointerEventData eventData)
         {
@@ -45,7 +46,7 @@ namespace adk
             //
             var dragX = cumulativeDrag.x - _pivotDragX;
             var posX = _pivotPosX + dragX * inputSensitivity;
-            _targetPosX = posX;
+            _targetPosX = posX-270;
         }
         private Vector2 CalculateCumulativeDrag(PointerEventData eventData)
         {
