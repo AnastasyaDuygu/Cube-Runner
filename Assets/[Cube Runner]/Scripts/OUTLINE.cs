@@ -19,12 +19,11 @@ Features:
 Scripts:
 (Main Camera) FollowPlayer -> follows player
 (Player) PlayerMovement -> responsible for players' forward and left/right movement
-                           : IPointerDownHandler, IDragHandler, IPointerUpHandler
 (Player) PlayerCollision -> responsible for player objects collisions (obstacles, coins)
                             *LevelEndEvent, *ObstacleHitEvent
 (Input Canvas) InputHandler -> detects hand movement across the canvas and translates
                              to player left/right movement, player movement uses this data
-                             : ISinglePointerRunnerInputListener
+                             : IPointerDownHandler, IDragHandler, IPointerUpHandler
 (Tutorial Canvas) TutorialCanvas -> on click tap to play panel *LevelStartEvent
 (Menu Canvas) UIHandler -> detects the correct game phase and enables the appropriate
                             canvas
