@@ -21,6 +21,8 @@ namespace adk
         private void OnStartButtonClicked()
         {
             onLevelStart.Invoke();
+            //player can move enaled
+            //disable tap to play canvas
         }
 
         public void DisableTapToPlayPanel()
