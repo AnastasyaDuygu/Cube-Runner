@@ -44,6 +44,11 @@ namespace adk
             coinAnimationImage.transform.DOMove(coinImageEndpos, .3f);
             coinAnimationImage.transform.position = coinImagePrepos;
         }
+        public void SaveCoinAmount()
+        {
+            var currentCoin = Convert.ToInt32(coinText.text);
+            PlayerPrefs.SetInt("coin", currentCoin);
+        }
     }
 }
 
