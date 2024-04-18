@@ -48,6 +48,11 @@ namespace adk
             _pivotPosX = posX;
             _pivotDragX = dragX;
         }
+
+        public void DisableInputCanvas()
+        {
+            gameObject.SetActive(false);
+        }
     }
 
 }
