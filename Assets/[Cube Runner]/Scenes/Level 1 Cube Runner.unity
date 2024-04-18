@@ -1102,6 +1102,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardForce: 4000
   canMove: 0
+  onPlayerOutOfBounds:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 819806483}
+        m_TargetAssemblyTypeName: adk.PlayerMovement, Assembly-CSharp
+        m_MethodName: PlayerCanMoveFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1368875799}
+        m_TargetAssemblyTypeName: adk.MenuManager, Assembly-CSharp
+        m_MethodName: EnableRestartCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 372458330}
+        m_TargetAssemblyTypeName: adk.InputHandler, Assembly-CSharp
+        m_MethodName: DisableInputCanvas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!54 &819806484
 Rigidbody:
   m_ObjectHideFlags: 0
