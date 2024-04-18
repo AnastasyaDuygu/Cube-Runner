@@ -39,4 +39,5 @@ Events:
 4. LoadNextLevelEvent -> called after LevelEndEvent
 5. *CoinCollectedEvent -> called when player hits coins, update coin text
 6. *ObstacleHitEvent -> called when player hits obstacle
+7. *PlayerOutOfBoundsEvent -> disables player movement and restarts level
 */
