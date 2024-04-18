@@ -22,12 +22,13 @@ namespace adk
             var pos = playerTransform.position;
             pos.x = Mathf.Lerp(pos.x, _targetPosX, lerpSpeed * Time.deltaTime);
             playerTransform.position = pos;
+            //Debug.Log(_targetPosX);
         }
     
         public void OnPointerDown(PointerEventData eventData)
         {
             //later add second finger ignore func
-            UpdatePivots(transform.position.x, 0);
+            UpdatePivots(playerTransform.position.x, 0);
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -36,7 +37,7 @@ namespace adk
             //
             var dragX = cumulativeDrag.x - _pivotDragX;
             var posX = _pivotPosX + dragX * inputSensitivity;
-            _targetPosX = posX-270; //for some reason it adds the x pos of the canvas its in -.- so i subtract it
+            _targetPosX = posX;
         }
         public void OnPointerUp(PointerEventData eventData)
         {
@@ -44,7 +45,7 @@ namespace adk
             //
             var dragX = cumulativeDrag.x - _pivotDragX;
             var posX = _pivotPosX + dragX * inputSensitivity;
-            _targetPosX = posX-270;
+            _targetPosX = posX;
         }
         private Vector2 CalculateCumulativeDrag(PointerEventData eventData)
         {
