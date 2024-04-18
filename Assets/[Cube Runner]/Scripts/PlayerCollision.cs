@@ -8,6 +8,7 @@ namespace adk
     {
         public UnityEvent onObstacleHit;
         public UnityEvent onCoinHit;
+        public UnityEvent onEndHit;
         
         private void OnCollisionEnter(Collision collision)
         {
@@ -32,6 +33,10 @@ namespace adk
                 onCoinHit.Invoke(); 
                 //coin text jump (DOTween)
                 //coin image animation (DOTween)
+            }else if (other.gameObject.tag == "End")
+            {
+                onEndHit.Invoke();
+                //menu manager open level end canvas
             }
         }
     }
