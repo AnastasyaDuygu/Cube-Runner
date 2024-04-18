@@ -48,7 +48,7 @@ namespace adk
         }
         private Vector2 CalculateCumulativeDrag(PointerEventData eventData)
         {
-            return -(eventData.position - eventData.pressPosition) / Screen.dpi;
+            return (eventData.position - eventData.pressPosition) / Screen.dpi;
         }
         private void UpdatePivots(float posX, float dragX)
         {
