@@ -24,32 +24,24 @@ namespace adk
             playerTransform.position = pos;
             //Debug.Log(_targetPosX);
         }
-    
         public void OnPointerDown(PointerEventData eventData)
         {
             //later add second finger ignore func
             UpdatePivots(playerTransform.position.x, 0);
         }
-
         public void OnDrag(PointerEventData eventData)
         {
-            var cumulativeDrag = CalculateCumulativeDrag(eventData);
-            //
-            var dragX = cumulativeDrag.x - _pivotDragX;
-            var posX = _pivotPosX + dragX * inputSensitivity;
-            _targetPosX = posX;
+            _targetPosX = CalculatePosX(eventData);
         }
         public void OnPointerUp(PointerEventData eventData)
         {
-            var cumulativeDrag = CalculateCumulativeDrag(eventData);
-            //
-            var dragX = cumulativeDrag.x - _pivotDragX;
-            var posX = _pivotPosX + dragX * inputSensitivity;
-            _targetPosX = posX;
+            _targetPosX = CalculatePosX(eventData);
         }
-        private Vector2 CalculateCumulativeDrag(PointerEventData eventData)
+        private float CalculatePosX(PointerEventData eventData)
         {
-            return (eventData.position - eventData.pressPosition) / Screen.dpi;
+            var cumulativeDrag = (eventData.position - eventData.pressPosition) / Screen.dpi; //calc cumulative drag
+            var dragX = cumulativeDrag.x - _pivotDragX;
+            return _pivotPosX + dragX * inputSensitivity;
         }
         private void UpdatePivots(float posX, float dragX)
         {
