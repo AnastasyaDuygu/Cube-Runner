@@ -11,6 +11,7 @@ namespace adk
         }
         public void LoadNextLevel()
         {
+            Debug.Log("Scene Count: " + SceneManager.sceneCount);
             if(SceneManager.GetActiveScene().buildIndex+1 >= SceneManager.sceneCount) //if current scene is last scene
                 SceneManager.LoadScene(0); //load first level, could potentially add an event for this***
             else
