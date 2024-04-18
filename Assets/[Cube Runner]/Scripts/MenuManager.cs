@@ -20,7 +20,6 @@ namespace adk
         {
             onLevelRestart.Invoke(); //level manager reload scene
         }
-        
         public void EnableEndCanvas()
         {
             levelEndCanvas.SetActive(true);

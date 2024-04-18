@@ -13,7 +13,6 @@ namespace adk
         {
             rb = GetComponent<Rigidbody>();
         }
-        
         void FixedUpdate() //does not depend on fps
         {
             if (!canMove) return; //if tap to play panel is still open return
@@ -24,12 +23,10 @@ namespace adk
                 //out of bounds, restart level and disable input canvas
             }
         }
-
         public void PlayerCanMoveTrue()
         {
             canMove = true;
         }
-
         public void PlayerCanMoveFalse()
         {
             canMove = false;
