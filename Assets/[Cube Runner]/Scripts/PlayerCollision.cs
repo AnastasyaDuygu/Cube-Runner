@@ -23,8 +23,11 @@ namespace adk
             if(other.gameObject.tag == "Coin")
             {
                 var endPos = other.transform.position;
-                other.gameObject.transform.DOJump(endPos, 20, 1, .4f);
-                //Destroy(other.gameObject);
+                other.gameObject.transform.DOJump(endPos, 20, 1, .4f)
+                    .OnComplete(() =>
+                    {
+                        Destroy(other.gameObject);
+                    });
                 
                 onCoinHit.Invoke(); 
                 //coin text jump (DOTween)
