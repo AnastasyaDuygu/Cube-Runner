@@ -24,7 +24,7 @@ namespace adk
         {
             levelEndCanvas.SetActive(true);
             //delay 0.8 seconds before refreshing level
-            Invoke("DelayEndEvent", 0.8f);
+            Invoke("DelayEndEvent", 1.25f);
         }
         void DelayEndEvent()
         {
