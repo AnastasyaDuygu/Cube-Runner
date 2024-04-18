@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace adk
 {
@@ -9,6 +10,7 @@ namespace adk
         public float forwardForce = -2000f;
         public bool canMove = false;
 
+        public UnityEvent onPlayerOutOfBounds;
         private void OnEnable()
         {
             rb = GetComponent<Rigidbody>();
@@ -21,6 +23,7 @@ namespace adk
             if (rb.position.y < 0 || rb.position.x < -7.55 || rb.position.x > 7.55)
             {
                 //out of bounds, restart level and disable input canvas
+                onPlayerOutOfBounds.Invoke();
             }
         }
         public void PlayerCanMoveTrue()
