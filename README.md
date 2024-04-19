@@ -31,8 +31,9 @@ You can easily download and play the game by following these steps:
 
 &nbsp;&nbsp;&nbsp; 1. Go to the [Releases](https://github.com/AnastasyaDuygu/Cube-Runner/releases) section of this repository.  
 &nbsp;&nbsp;&nbsp; 2. Find the latest release and click on it.  
-&nbsp;&nbsp;&nbsp; 3. Download the ` 3D.Cube.Runner.exe ` file from the release.  
-&nbsp;&nbsp;&nbsp; 4. Run ` 3D.Cube.Runner.exe ` to start playing the game !  
+&nbsp;&nbsp;&nbsp; 3. Download the ` v1.0.1.zip ` file from the release.
+&nbsp;&nbsp;&nbsp; 4. Unzip the zip file.  
+&nbsp;&nbsp;&nbsp; 5. Run ` 3D.Cube.Runner.exe ` to start playing the game !  
 
 
 ## How To Play
