@@ -1,24 +1,32 @@
 using TMPro;
 using UnityEngine;
 
-public class ScoreManager : MonoBehaviour
+namespace adk
 {
-    public TextMeshProUGUI scoreText;
-    public Transform player;
+    public class ScoreManager : MonoBehaviour
+    {
+        public TextMeshProUGUI scoreText;
+        public Transform player;
 
-    private void Awake()
-    {
-        scoreText.text = "0";
-    }
-    void Update()
-    {
-        float zero = player.position.z;
-        float smaller = zero / 10;
-        scoreText.text = smaller.ToString("0");
-    }
-
-    public void EnableScore()
-    {
-        gameObject.SetActive(true);
+        public bool levelStop = false;
+        private void Awake()
+        {
+            scoreText.text = "0";
+        }
+        void Update()
+        {
+            if (levelStop == true) return;
+            float zero = player.position.z * 10;
+            float smaller = zero / 10;
+            scoreText.text = smaller.ToString("0");
+        }
+        public void EnableScore()
+        {
+            gameObject.SetActive(true);
+        }
+        public void LevelStop()
+        {
+            levelStop = true;
+        }
     }
 }
