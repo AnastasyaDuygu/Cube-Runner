@@ -11,8 +11,8 @@
 This project is a simple 3D runner project made in Unity. The player is a cube and their goal is to dodge the obstacles and collect as many coins as possible before reaching the end line.  
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="Screenshots/Cube-Runner-screenshot2.png" alt="In-Game" />
-    <img src="Screenshots/Cube-Runner-screenshot3.png" alt="In-Game" />
+    <img src="Screenshots/Cube-Runner-screenshot2.png" width="500" height="500" alt="In-Game" />
+    <img src="Screenshots/Cube-Runner-screenshot3.png" width="500" height="500" alt="In-Game" />
 </div>
 
 ## Installation
