@@ -49,6 +49,12 @@ namespace adk
             var currentCoin = Convert.ToInt32(coinText.text);
             PlayerPrefs.SetInt("coin", currentCoin);
         }
+
+        public void ResetCoin()
+        {
+            PlayerPrefs.SetInt("coin", 0);
+            coinText.text = PlayerPrefs.GetInt("coin").ToString();
+        }
     }
 }
 
