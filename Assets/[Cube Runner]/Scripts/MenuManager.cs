@@ -35,5 +35,10 @@ namespace adk
         {
             levelLastCanvas.SetActive(true);
         }
+
+        public void CloseGame()
+        {
+            Application.Quit();
+        }
     }
 }
