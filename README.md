@@ -5,7 +5,7 @@
 
 ## Introduction
 
-This project is a simple 3D runner project made in Unity. The player is a cube and their goal is to dodge the obstacles and collect as many coins as possible before reaching the end line.
+This project is a simple 3D runner project made in Unity. The player is a cube and their goal is to dodge the obstacles and collect as many coins as possible before reaching the end line.  
 ![alt-text-1](https://via.placeholder.com/468x300?text=App+Screenshot+Here) ![alt-text-2](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
