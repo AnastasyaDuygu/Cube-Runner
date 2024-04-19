@@ -9,11 +9,11 @@ Features:
     4. i. if player dies all the coins they collected that round resets
     4. ii. player coin info is stored in player prefs
 5. if player is out of the bounds of the platform, player will no longer be able to 
-    move left/right, "You Died" canvas is enabled and level is restarted
+    move left/right, level restart canvas is enabled and level is restarted
 6. level ends when player reaches the end platform, input canvas is disabled after
     level end
 7. next level is automatically loaded
-8. if all levels are completed, a pop up says "all levels completed" and loop to 
+8. if all levels are completed, a pop up says "all levels completed" and a button loop to 
     the first level
 -----------
 Scripts:
