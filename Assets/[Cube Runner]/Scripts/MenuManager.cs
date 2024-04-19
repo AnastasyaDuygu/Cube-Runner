@@ -7,6 +7,7 @@ namespace adk
     {
         [SerializeField] private GameObject levelRestartCanvas;
         [SerializeField] private GameObject levelEndCanvas;
+        [SerializeField] private GameObject levelLastCanvas;
 
         public UnityEvent onLevelRestart;
         public UnityEvent onLevelEnd;
@@ -29,6 +30,10 @@ namespace adk
         void DelayEndEvent()
         {
             onLevelEnd.Invoke(); //level manager load next scene, save current coin amount
+        }
+        public void EnableLastCanvas()
+        {
+            levelLastCanvas.SetActive(true);
         }
     }
 }
