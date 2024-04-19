@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/[Cube Runner]/Scenes/Level 1 Cube Runner.unity
     guid: 2165f250fa5e95a499a6f50af8a77e8f
+  - enabled: 1
+    path: Assets/[Cube Runner]/Scenes/Level 2 Cube Runner.unity
+    guid: 6c7f20194143f6d459012ef2984c33e2
   m_configObjects: {}
