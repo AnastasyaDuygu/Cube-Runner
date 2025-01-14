@@ -17,7 +17,7 @@ This project is a simple 3D runner project made in Unity. The player is a cube a
 
 ## Installation
 
-**This project is a project made with Unity version 2022.3.15f1.  
+**This is a project made with Unity version 2022.3.15f1.  
 To run the Cube Runner game on your Windows system, follow these steps:  
 
 &nbsp;&nbsp;&nbsp; 1. Clone this repository or download it as a ZIP file.  
