@@ -17,12 +17,12 @@ This project is a simple 3D runner project made in Unity. The player is a cube a
 
 ## Installation
 
-
-To run the Cube Runner game on your Windows system, follow these steps:
+**This project is a Unity project.  
+To run the Cube Runner game on your Windows system, follow these steps:  
 
 &nbsp;&nbsp;&nbsp; 1. Clone this repository or download it as a ZIP file.  
-&nbsp;&nbsp;&nbsp; 2. Open the project in Visual Studio or your preferred C++ IDE.  
-&nbsp;&nbsp;&nbsp; 3. Build and run the project.    
+&nbsp;&nbsp;&nbsp; 2. Open the project in Unity.  
+&nbsp;&nbsp;&nbsp; 3. Build and run the project.  
 
 
 ### Downloading Release and Playing
